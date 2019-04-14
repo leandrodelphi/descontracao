@@ -1,0 +1,89 @@
+.cBod1 {
+    background-color:#E8E8E8;
+}
+
+.cDiv1 {
+    width:400;
+    margin:auto;
+    text-align: center
+}
+
+.cImg1 {   
+    margin:auto;
+}
+
+.cH1 {
+    font-size: 60px;
+    background-color: rgb(219, 170, 46);
+    color: rgb(44,114,139);
+    text-align: center;
+    font-family:"open sans",arial;
+    border: 450,1000;
+    margin: 0;
+    borde
+}
+h2 {
+    font-size: 60px;
+    font-family:"open sans", sans-serif;
+    background-color: rgb(255, 255,255);
+    color: rgb(255,200,0);
+    text-align: left;
+    border: 450,1000;
+}
+
+
+h3 {
+    font-size: 20px;
+    font-family:"open sans", sans-serif;
+    text-align:center;
+}
+
+fieldset {
+    background-color:#DAA520;
+    width:100;
+    margin:auto;
+    text-align: left;
+    border="4";
+    width="50%"
+}
+
+table {
+    width:600px;
+    margin:auto;
+    text-align: left;
+}
+
+legend {
+    color: rgb(44,114,139);
+    text-align: center;
+    background-color:#DAA520
+}
+.cSelComp{
+    border: 0px
+}
+
+ .cFielB {  
+  width: 500px;
+  margin-left:0;
+  height: 100%;
+}
+
+.cFielF {
+  width: 500px;
+  margin-left:0;
+  height: 100%;
+}
+
+.cLogImg {
+    margin:0;
+}
+
+.cBut {
+    background:rgb(170,190,240); 
+    color: black;
+}
+
+.cEntra {
+    background:rgb(170,190,240); 
+}
+
