@@ -1,0 +1,5 @@
+classe do codigo e significados
+dvImgP = div + imagem + principal
+IdxFdtLog = index + fieldset + login
+Frm1 = formulario1
+TbIdx = tabela + index

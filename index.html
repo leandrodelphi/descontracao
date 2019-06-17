@@ -6,113 +6,128 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="icon" href="img/descont.png">
-	<link rel="stylesheet" href="/css/global.css">
+	<link rel="stylesheet" href="global.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-
-<body>
+<body>	
 	<main>
-		<div style="width:400;margin:auto;text-align: center"><img src="img/logo.png" alt="foto da porção de meio kilo"
-				width="400px" height="200px" style="margin:auto"></div>
-		<h2> FAÇA SEU PEDIDO </h2>
-
+		<div style="width:400;margin:auto;text-align: center" ><img src="img/logo.png" alt="foto da porção de meio kilo" width="400px" height="200px" style="margin:auto" ></div>
+		<p class="Login" id="modal1"><h4 class="cH4">Seja Bem Vindo!</h4>	
+		<form class="cForm1" name="form1" action="servlet1" method="post">
+		<fieldset><legend>LOGIN</legend>
+			<fieldset class="cDadosIndex" id="usuario">
+				<table  class="cTbInd" border="2">
+					<tr>					
+						<td>
+							<p><label for="cLogin">Usuário:</label><br><input type="text" name="tLogin" id="cLogin" size="20"
+									maxlength="20" placeholder="Nome de Usuário" /></p>
+						</td>
+						<td>
+							<p><label for="cSenha">Senha:</label> <br>
+								<input type="password" name="tSenha" id="cSenha" size="10" maxlength="15	"
+									placeholder="8 Dígitos" /></p>
+						</td>						
+					</tr>
+				</table>
+					<a style="margin:5px; margin-top:5px;margin-bottom:0;" class="btn btn-success text-center"href="file:///E:/Projetos/Descontracao/pedido.html">Entrar</a>
+		
+				<!-- Final da tabela de Login--->
+			</fieldset>
+		</fieldset>			
+		</form> 
 	</main>
-	<form name="form1" action="servlet1" method="post">
-		<fieldset id="usuario"> <!-- conjunto geral de campos -->
-			<legend>CADASTRO DE USUÁRIO</legend>
-			<!-- inicio da tabela de cadastro de cliente--->
-			<table>
-				<tr>
-					<td>
-						<p><label for="cNome"> Nome:</label> <br><input type="text" name="tNome" id="cNome" size="30"
-								maxlength="40" placeholder="Nome Completo" /></p>
-					</td>
-					<td>
-						<p><label for="cLogin">Login:</label> <br><input type="text" name="tLogin" id="cLogin" size="20"
-								maxlength="20" placeholder="Nome de Usuário" /></p>
-					</td>
-					<td>
-						<p><label for="cSenha">Senha:</label> <br>
-							<input type="password" name="tSenha" id="cSenha" size="8" maxlength="8"
-								placeholder="8 Dígitos" /></p>
-					</td>
-					<td>
-						<p><label for="cTel">Telefone:</label><br>
-							<input type="text" name="tTel" id="cTel" size="15" maxlength="15"
-								placeholder="Número de Telefone" /></p>
-					</td>
-					<td>
-						<p><label for="cMail">E-mail:</label><br>
-							<input type="email" name="tMail" id="cMail" size="40" maxlength="45"
-								placeholder=" Digite Seu E-mail" /></p>
-					</td>
-					<td>
-						<p><label for="cNasc">Data de Nascimento:</label></p>
-						<input type="date" name="tNasc" id="cNasc" />
-					</td>
-					<td>
-						<p style="text-align: center"><label for="cMasc">Sexo</label></p>
-						<input type="radio" name="tSexo" id="cMasc" /><label for="cMasc">M</label>
-						<input type="radio" name="tSexo" id="cFem" /> <label for="cFem"> F</label>
-					</td>
-				</tr>
-			</table>
-			<!-- Final da tabela de cadastro de cliente--->
-		</fieldset>
-		<!-- inicio da tabela de Cadastro de Endereço--->
-		<fieldset id="endereco">
-			<legend>CADASTRO DE ENDEREÇO</legend>
-			<table>
-				<tr>
-					<td>
-						<label for="cCep">Cep:</label>
-						<input type="" name="tCep" id="cCep" size="8" maxlength="8" placeholder="Dígite o Cep" />
-					</td>
-					<td>
-						<label for="cBair">Bairro:</label>
-						<input type="" name="tBair" id="cBair" size="8" maxlength="8" placeholder="Dígite o Bairro" />
-					</td>
-					<td>
-						<label for="cRua">Logradouro:</label>
-						<input type="text" name="tRua" id="cRua" size="40" maxlength="50"
-							placeholder="Dígite sua Rua, Av ou travessa e Bairro" />
-					</td>
-					<td>
-						<label for="cNum">Número:</label>
-						<input type="" name="tNum" id="cNum" size="9" maxlength="9" placeholder="Número" />
-					</td>
-					<td>
-						<label for="cRef">Referência:</label>
-						<input type="text" name="tRef" id="cRef" size="40" maxlength="50"
-							placeholder="Ponto de Referência" />
-					</td>
-					<td>
-						<label for="cTel">Telefone:</label>
-						<input type="text" name="tTel" id="cTel" size="15" maxlength="15"
-							placeholder="Número de Telefone" />
-					</td>
-				</tr>
-			</table>
-			<!-- Final da tabela de Cadastro de Endereço--->
-		</fieldset>
-	</form>
+	</p>
+<!--INICIO DO CODIGO DE CADASTRO PARA O MODAL--->
+		<div class="modal"><!DOCTYPE html>
+<html>
+	<head>
+		<title>Cadastro de cliente</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<link rel="icon" href="img/descont.png">
+		<link rel="stylesheet" href="cadastro.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head><style>body{background-color:#E8E8E8;}</style>
+	<body class="clBody">
+		<main>
+			
+			<h4 class="cH4">Faça Seu Cadastro</h4>			
+			<!--terminar a action--->
+			<form class="cForm" name="form1" action="000" method="post">
+				<fieldset class="cDadosCl" id="usuario">
+					<!-- inicio da tabela de cadastro de cliente--->
+					<div><table class="cTable1" border="1">
+						<tr>
+							<td>						
+								<p><label class="cNome" for="cNome"> Nome:</label> 
+								<input type="text" name="tNome" id="cNome" size="50" maxlength="50" placeholder="Primeiro Nome"/>					
+							
+								<label class="cSobreNome" for="cSobreNome"> Sobre Nome:</label> 
+								<input type="text" name="tSobreNome" id="cSobreNome" size="50" maxlength="50" placeholder="Sobre Nome"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><label class="cLogin" for="cLogin">Usuário:</label> 
+								<input type="text" name="tLogin" id="cLogin" size="20" maxlength="20" placeholder="Nome de Usuário"/>						
+							
+								<label class="cSenhaP" for="cSenhaP">Senha:</label>
+								<input type="password" name="tSenha" id="cSenhaP" size="8" maxlength="8" placeholder="8 Dígitos"/>
+							
+								<label class="cSenhaC" for="cSenhaC">Senha:</label> 
+								<input type="password" name="tSenha" id="cSenhaC" size="8" maxlength="8" placeholder="Repita"/>
+							
+								<label class="cDDD" for="cDDD">DDD:</label>
+								<input type="text" name="tDDD" id="cDDD" size="9" maxlength="3" placeholder="Dígite o DDD"/>
 
-	<!-- continuar daqui --->
-	<fieldset id="Produtos">
-		<legend>FRANGUINHO</legend>
-		<div>Franguinho de 250g com um acompanhamento</div>
-		<div style="width:400;margin:auto;text-align: center"><img style="width:400;margin:auto;text-align: center"
-				src="img/frangBatata.png" alt="foto da porção de meio kilo" width="200px" height="100px"
-				style="margin:auto"></div>
-
-		<!-- atenção colocar em destaque que os franguinhos de 250 g possui complementos de 200g 
-			(batata, aipim, polenta com queijo e ponta) apenas ou 8 unidades (bolinha de queijo 
-			e coxinha) camarão e bolinho de bacalhau não se enquadram no complemento. -->
-		<p>Franguinho de 500g
-			<p>Franguinho de 500g + 1 </p>
-			<p>Franguinho de 500g + 2 </p>
-			<p>Franguinho de 500g + 3 </p>
-	</fieldset>
+								<label class="cTel" for="cTel">Telefone:</label>
+								<input type="text" name="tTel" id="cTel" size="16" maxlength="12" placeholder="Número de Telefone"/></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label class="cMail" for="cMail">E-mail:</label>
+								<input type="email" name="tMail" id="cMail" size="40" maxlength="45" placeholder=" Dígite Seu E-mail" />
+							
+								<label class="cNasc" for="cNasc">Data de Nascimento:</label>
+								<input type="date" name="tNasc" id="cNasc"/>
+							
+								<label class="cMasc" for="cMasc">Sexo</label>
+								<label for="cMasc">M</label><input type="radio" name="tSexo" id="cMasc"/>
+								<label for="cFem">F</label><input type="radio" name="tSexo" id="cFem"/></p>
+							</td>				
+						</tr>
+					</table></div>
+					<!-- Final da tabela de cadastro de cliente--->	
+					<!-- inicio da tabela de Cadastro de Endereço--->
+					<div><table class="cTable2" border="1">
+						<tr>
+							<td> 
+								<p class="cCep"><label for="cCep">Cep:</label></p>
+								<input type="" name="tCep" id="cCep" size="8" maxlength="8" placeholder="Dígite o Cep"/>
+							
+								<p class="cBair"><label for="cBair">Bairro:</label></p>
+								<input type="" name="tBair" id="cBair" size="20" maxlength="20" placeholder="Dígite o Bairro"/>
+							
+								<p class="cRua"><label for="cRua">Logradouro:</label>
+								<input type="text" name="tRua" id="cRua" size="50" maxlength="50" placeholder="Dígite sua Rua, Av ou travessa e Bairro"/>
+							
+								<p class="cNum"><label for="cNum">Número:</label>
+								<input type="" name="tNum" id="cNum" size="4" maxlength="4" placeholder="Número"/>
+							
+								<p class="cRef"><label for="cRef">Referência:</label>
+								<input type="text" name="tRef" id="cRef" size="60" maxlength="60" placeholder="Ponto de Referência" /></p>							
+							</td>
+						</tr>
+				</table>
+				<a class="btn btn-success text-center" href="file:///E:/Projetos/Descontracao/index.html"> CADASTRAR</a>
+					<!-- Final da tabela de Cadastro de Endereço--->
+				</fieldset>		
+					
+			</form>
+		</main>	
+	</body>
+</html></div>
 
 </body>
-
 </html>
