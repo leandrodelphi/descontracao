@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste modal</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">	
+	<link rel="icon" href="img/descont.png">
+	<link rel="stylesheet" href="global.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script type="text/javascript">
+			function validar(){
+				var nome= formuser.nome.value;
+				var tel= formuser.tel.value;
+				
+				if (nome == ""){
+					alert("Campo Nome de Usuário é Obrigatório.");
+					formuser.nome.focus();
+					return false;
+				}
+
+				if (tel == ""){
+					alert("Campo Senha é Obrigatório.");
+					formuser.tel.focus();
+					return false;
+				}				
+			}				
+				
+		</script>
+</head>
+<body>
+	<button id="modalbtn" class="btn btn-outline-primary"data-toggle="modal"data-target="#validandoUsuáirio">Cadastrar Usuário</button>
+<fieldset class="modalbtn">
+	<div class="dvImgP"><img class="dvImgPI" src="img/logo.png" alt="foto da porção de meio kilo" width="400px" height="200px" style="margin:auto"></div>
+	<h4 class="cH4"><b>Faça seu Cadastro!</b></h4>
+	<fieldset class="validarUsuario">
+			<form class="Frm1" name="formuser" action="entrar.php" method="POST"><legend>
+			Dígite seu Usuário e Senha</legend>				
+				<table class="TbIdx" border="2">
+					<tr>					
+						<td>
+							<p><label for="nome">Usuário:</label><input type="text" name="nome" id="nome" size="30"maxlength="20" placeholder="Nome de Usuário"></p>
+						</td>
+						<td>
+							<p><label for="senha">Senha:</label><input type="password" name="tel" id="senha"size="18" maxlength="15"placeholder="Mínimo 6 e Máximo 10"></p>						
+						</td>
+					</tr>
+				</table>				
+				<input type="submit" onclick="return validar ()"value="Entrar"class="btn btn-outline-success"data-toggle="modal"data-target="#validandoUsuáirio">
+			</form>
+		</fieldset>
+</fieldset>
+
+</body>
+</html>

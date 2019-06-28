@@ -7,28 +7,35 @@
     <link rel="icon" href="img/descont.png">
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <div Id="menu">
+    <nav Id="menu">
+        <h1>seja bem vindo</h1>
         <ul>
             <li>
                 <a href="index.html"></a>Home</li>
             <li>
                 <a href="fale_conosco.html"></a>Fale Conosco</li>
             <li>
-                <a cla href="index.html"></a>Cadatrar</li>
+                <a href="index.html"></a>Home</li>
             <li>
                 <a href="index.html"></a>Home</li>
+        </ul>
+
+    </nav>
+    <nav Id="login">
+        <table>
             <tr>
                 <td>
                     <label class="email" for="email">Usuário</label>
                     <input type="email" name="email" id="email" size="30" maxlength="45" placeholder=" Dígite Seu E-mail" />
+
                     <label class="SenhaP" for="SenhaP">Senha</label>
                     <input type="password" name="SenhaP" id="SenhaP" size="17" maxlength="10" placeholder="Mínimo 6 e Máximo 10" />
-                </td>
-                <button id="botao" class="btn btn-outline-success" data-toggle="modal" data-target="#validandoUsuáirio">Entrar</button>
-                <button id="botao" class="btn btn-outline-primary" data-toggle="modal" data-target="#validandoUsuáirio">Cadastrar</button>
+                    <td>
+                        <button id="modalbtn" class="btn btn-outline-primary" data-toggle="modal" data-target="#validandoUsuáirio">Entrar</button>
             </tr>
-        </ul>
-    </div>
+
+        </table>
+    </nav>
     <div class="logo"><img class="dvImgPI" src="img/logo.png" alt="foto da porção de meio kilo" width="400px" height="200px" style="margin:auto"></div>
     <h1>Faça Seu Pedido!</h1>
 </head>
@@ -39,6 +46,7 @@
             <!--inicio do cardapio de franguinhos-->
             <fieldset class="Pedido">
                 <legend name="tFranguinho" type="text"><b>Porção Individual</b></legend>
+                <!--novo para correção-->
                 <fieldset class="cFielF250Btt"><label for="c250Bttg">
             <input id="c250Bttg"type="checkbox" name="t250Bttg"><label for="c250Bttg">Franguinho de 250</label>
                     <div style="width:400;margin:auto;text-align: right;">
@@ -63,6 +71,7 @@
                     </form>
                 </fieldset>
             </fieldset>
+            <!--final do novo para correção-->
             <!--incio do franguinho de 500g-->
             <fieldset id="cFielF500g">
                 <legend name="tFielF500g" type="text"><b>Franguinho de 500G</b></legend>
